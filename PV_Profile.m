@@ -1,7 +1,7 @@
-function PV_f = PV_Profile(T)
+function PV_f = PV_Profile(T,t0)
 
 % Get current Simulink time
-t0 = getCurrentTime(); 
+% t0 = getCurrentTime(); 
 
 % Simulation timestep (seconds)
 dt = 60; % 1 minute steps, or match your solver step size
@@ -10,7 +10,7 @@ dt = 60; % 1 minute steps, or match your solver step size
 PV_f = zeros(T,1);
 
 % PV sinusoidal model parameters
-Pmax = 2000;       % peak PV power
+Pmax = 1200;       % peak PV power
 day_length = 86400; % seconds per day (24 hours)
 
 % Generate forecast for next T steps
